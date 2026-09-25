@@ -1,0 +1,11 @@
+dn: ou=IT,dc=securecorp,dc=local
+objectClass: organizationalUnit
+ou: IT
+
+dn: ou=Dev,dc=securecorp,dc=local
+objectClass: organizationalUnit
+ou: Dev
+
+dn: ou=RH,dc=securecorp,dc=local
+objectClass: organizationalUnit
+ou: RH

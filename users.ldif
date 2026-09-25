@@ -1,0 +1,51 @@
+# SecureCorp lab users — one per department (IT, Dev, HR).
+#
+# No passwords are stored in this file on purpose: credentials never live
+# in version control. Set each password after the import, e.g.:
+#
+#   ldappasswd -H ldaps://localhost -x -D "cn=admin,dc=securecorp,dc=local" -W \
+#     -S "uid=alice,ou=IT,dc=securecorp,dc=local"
+#
+# Use a different password for every account.
+
+dn: uid=alice,ou=IT,dc=securecorp,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: alice
+sn: Alice
+givenName: Alice
+cn: Alice IT
+displayName: Alice IT
+uidNumber: 1001
+gidNumber: 1001
+loginShell: /bin/bash
+homeDirectory: /home/alice
+
+dn: uid=bob,ou=Dev,dc=securecorp,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: bob
+sn: Bob
+givenName: Bob
+cn: Bob Dev
+displayName: Bob Dev
+uidNumber: 1002
+gidNumber: 1002
+loginShell: /bin/bash
+homeDirectory: /home/bob
+
+dn: uid=carol,ou=RH,dc=securecorp,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: carol
+sn: Carol
+givenName: Carol
+cn: Carol RH
+displayName: Carol RH
+uidNumber: 1003
+gidNumber: 1003
+loginShell: /bin/bash
+homeDirectory: /home/carol
